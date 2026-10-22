@@ -3,20 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club Event Registation</title>
+    <link rel="stylesheet" href="./event.css"
+    <title><title> Event Registation</title>
 </head>
 <body>
-    <header>
-       <a href="./Event">Event|</a>
-       <a href="./Resister">Resister</a>
-    </header>
-    <hr>
-    <main>
-        <h1>Coding Club 1st</h1>
-        <table border="05" width="400px">
+    <div class="container">
+        <h1>CodingClub</h1>
+    <nav>
+       <a href="#">Event |</a>
+       
+       <a href="#">Resister</a>
+    </nav>
+    
+
+     
+
+     <h2>Upcoming Event</h2>
+        
+      <table class="table" border="05" width="500px" >
+            <caption>Club Events</caption>
+         <thead>
+            <tr>
                 <th>Event</th>
-                <th>Data</th>
+                <th>Date</th>
                 <th>Venue</th>
+            </tr>
+         </thead>
+         <tbody>
             <tr>
                 <td>HTML Workshop</td>
                 <td>12 Nov</td>
@@ -28,28 +41,74 @@
                 <td>Seminar Hall</td>
             </tr>
             <tr>
-            
-                <td colspan="03">Total Event : 2</td>
+                <td colspan="03">Total Event: 2</td>
             </tr>
+         </tbody>
         </table>
     </main>
     
-    <footer>
+    
         <h2>Resister</h2>
-        <label for="name">Name:</label>
-        <input type="name" id="name" name="name" placeholder="Enter Your Name" required>
-        <br><br>
-        <label for="email">Email:</label>
-        
-        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
-        <br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        <br><br>
-        <label for="Date of birth">Date of birth:</label>
-        <input type=""
+        <div class="container2">
+            <label for="name">Name:</label>
+            <input type="name" id="name"  placeholder="Enter Your Name" required>
+        </div>
+            <br><br>
 
-    </footer>
+            <label for="email">Email:</label>
+             <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+          
+             <br><br>
+
+            <label for="password">Password:</label>
+              <input type="password" id="password" name="password" placeholder="Enter your password" required>
+           <br><br>
+
+            <label for="Date of birth">Date of birth:</label>
+              <input type="date" id="dob" name="date of birth" placeholder="dd/mm/yy" required
+          <br><br><br>
+
+            <label for="phone">Phone:</label>
+              <input type="phone" id="phone" name="phone" placeholder="" required>
+          <br><br>
+
+            <label for="gender">Gender:</label>
+              <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+          <br><br>
+
+            <label for="interests">Interests:</label>
+              <input type="radio" id="web" name="Interests" value="Web">
+            <label for="Web">Web</label>
+              <input type="radio" id="dsa" name="Interests" value="dsa">
+            <label for="dsa">DSA</label>
+          <br><br>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch">
+                <option value="BCA">BCA</option>
+                <option value="B.TECH(cse)">B.TECH(cse)</option>
+                <option value="MBA">MBA</option>
+                <option value="BBA">BBA</option>
+                <option value="LLB">LLB</option>
+            </select>
+            </div >
+            <br><br>
+            <div>
+            <tr>
+            <td><label for="join">Why do you want to join?</label></td>
+            <br>
+             <td><textarea id="message" name="message" rows="5" cols="30" placeholder="" required></textarea></td>
+             </tr>
+             </div>       
+                 <br>
+        
+            <button class="submit">Resister</button>
+        
+
+    
     
 </body>
 </html>

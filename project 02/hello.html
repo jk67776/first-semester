@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club</title>
+</head>
+<body>
+
+    <!-- Links Section -->
+    <a href="#">Events</a> | <a href="#">Register</a>
+
+    <!-- Main Title -->
+    <h1>Coding Club</h1>
+
+    <!-- Upcoming Events Section -->
+    <h2>Upcoming Events</h2>
+    
+    <table border="1">
+        <caption>Club Events</caption>
+        <thead>
+            <tr>
+                <th>Event</th>
+                <th>Date</th>
+                <th>Venue</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML Workshop</td>
+                <td>12 Nov</td>
+                <td>Lab 1</td>
+            </tr>
+            <tr>
+                <td>Hackathon</td>
+                <td>20 Nov</td>
+                <td>Seminar Hall</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Total events: 2</p>
+
+    <!-- Registration Form Section -->
+    <h2>Register</h2>
+
+    <form>
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your name">
+        </p>
+
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+        </p>
+
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+        </p>
+
+        <p>
+            <label for="dob">Date of birth:</label>
+            <input type="date" id="dob">
+        </p>
+
+        <p>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone">
+        </p>
+
+        <p>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+        </p>
+
+        <p>
+            <label>Interests:</label>
+            <input type="checkbox" id="web" name="interests" value="web">
+            <label for="web">Web</label>
+            <input type="checkbox" id="dsa" name="interests" value="dsa">
+            <label for="dsa">DSA</label>
+        </p>
+
+        <p>
+            <label for="branch">Branch:</label>
+            <select id="branch">
+                <option value="bca">BCA</option>
+                <option value="btech">B.Tech</option>
+                <option value="mca">MCA</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="why-join">Why do you want to join?</label><br>
+            <textarea id="why-join" rows="4" cols="30"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Register">
+        </p>
+    </form>
+
+</body>
+</html>
