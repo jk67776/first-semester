@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>आदियोगी शिव - Aadiyogi Shiva CSS Art</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #182232 0%, #080c14 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    /* मुख्य कैनवास */
+    .canvas {
+      position: relative;
+      width: 380px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* दिव्य ऑरा ग्लो (Aura Glow) */
+    .aura-glow {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 120, 0, 0.35) 0%, rgba(255, 60, 0, 0.1) 60%, transparent 80%);
+      border-radius: 50%;
+      top: 30px;
+      filter: blur(15px);
+      animation: pulse 4s infinite alternate ease-in-out;
+    }
+
+    /* आदियोगी चेहरे का सिलुऐट कटआउट */
+    .adiyogi-face {
+      position: relative;
+      width: 170px;
+      height: 220px;
+      background: linear-gradient(180deg, #111722 0%, #05070a 100%);
+      border-radius: 80px 80px 60px 60px;
+      box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.05), 0 10px 30px rgba(0,0,0,0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+
+    /* जटा/बाल (Hair Top Knot) */
+    .hair-bun {
+      position: absolute;
+      top: -35px;
+      width: 90px;
+      height: 55px;
+      background: #090d14;
+      border-radius: 50% 50% 20% 20%;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+    }
+
+    /* अर्धचंद्र (Crescent Moon) */
+    .crescent-moon {
+      position: absolute;
+      top: -15px;
+      right: 25px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      box-shadow: -6px 5px 0 0 #ffe082;
+      filter: drop-shadow(0 0 6px #ffb300);
+      transform: rotate(-20deg);
+      z-index: 3;
+    }
+
+    /* नाग/सर्प (Snake/Vasuki Around Neck) */
+    .snake {
+      position: absolute;
+      bottom: -10px;
+      width: 190px;
+      height: 45px;
+      border: 12px solid #0d131d;
+      border-top: none;
+      border-radius: 0 0 90px 90px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.9);
+      z-index: 3;
+    }
+
+    /* त्रिपुंड (White Tilak) */
+    .tripund-container {
+      position: absolute;
+      top: 45px;
+      width: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      z-index: 4;
+    }
+
+    .tripund-line {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #e0e0e0 20%, #ffffff 80%, transparent);
+      border-radius: 2px;
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+    }
+
+    /* तीसरी आँख (Third Eye) */
+    .third-eye {
+      position: absolute;
+      top: 38px;
+      width: 10px;
+      height: 22px;
+      background: #ff3d00;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ff5722, 0 0 20px #ff9800;
+      border: 1px solid #ffe082;
+      z-index: 5;
+    }
+
+    /* रुद्राक्ष माला (Rudraksha Necklace) */
+    .rudraksha-necklace {
+      position: absolute;
+      bottom: -30px;
+      width: 150px;
+      height: 40px;
+      border: 4px dotted #8d6e63;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(141, 110, 99, 0.6);
+      z-index: 4;
+    }
+
+    /* सुंदर टेक्स्ट */
+    .text-title {
+      margin-top: 35px;
+      color: #ffe082;
+      font-size: 30px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      text-shadow: 0 0 12px #ff9800, 0 0 25px #ff3d00;
+    }
+
+    .text-sub {
+      margin-top: 5px;
+      color: #b0bec5;
+      font-size: 14px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.96); opacity: 0.7; }
+      100% { transform: scale(1.05); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="canvas">
+    <!-- ऑरा ग्लो -->
+    <div class="aura-glow"></div>
+
+    <!-- आदियोगी फ़ेस स्ट्रक्चर -->
+    <div class="adiyogi-face">
+      <!-- जटा -->
+      <div class="hair-bun"></div>
+      
+      <!-- चंद्रमा -->
+      <div class="crescent-moon"></div>
+
+      <!-- माथे का त्रिपुंड -->
+      <div class="tripund-container">
+        <div class="tripund-line"></div>
+        <div class="tripund-line"></div>
+        <div class="tripund-line"></div>
+      </div>
+
+      <!-- तीसरी आँख -->
+      <div class="third-eye"></div>
+
+      <!-- गले का सर्प -->
+      <div class="snake"></div>
+
+      <!-- रुद्राक्ष -->
+      <div class="rudraksha-necklace"></div>
+    </div>
+  </div>
+
+  <div class="text-title">॥ आदियोगी ॥</div>
+  <div class="text-sub">THE FIRST YOGI</div>
+
+</body>
+</html>

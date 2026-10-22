@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>जय श्री राम - CSS Hanuman Art</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at center, #2b1000 0%, #080300 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    /* मुख्य कंटेनर */
+    .canvas {
+      position: relative;
+      width: 360px;
+      height: 480px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* दिव्य आभामंडल (Divine Aura) */
+    .divine-aura {
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(255, 102, 0, 0.4) 0%, rgba(255, 51, 0, 0.15) 60%, transparent 80%);
+      border-radius: 50%;
+      top: 30px;
+      filter: blur(12px);
+      animation: pulse 3s infinite alternate ease-in-out;
+    }
+
+    /* हनुमान जी का सिंदूरी स्वरूप/फेस बेस */
+    .face {
+      position: relative;
+      width: 140px;
+      height: 180px;
+      background: linear-gradient(180deg, #ff5722 0%, #e64a19 100%);
+      border-radius: 70px 70px 60px 60px;
+      box-shadow: 0 0 25px rgba(255, 87, 34, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+
+    /* मुकुट (Crown) */
+    .crown {
+      position: absolute;
+      top: -65px;
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-bottom: 80px solid #ffd700;
+      filter: drop-shadow(0 0 10px #ff9800);
+      z-index: 4;
+    }
+
+    .crown-gem {
+      position: absolute;
+      top: 35px;
+      left: -10px;
+      width: 20px;
+      height: 20px;
+      background: #d50000;
+      transform: rotate(45deg);
+      border: 2px solid #fff;
+      box-shadow: 0 0 8px #d50000;
+    }
+
+    /* कुंडल (Earrings) */
+    .earring-left, .earring-right {
+      position: absolute;
+      top: 80px;
+      width: 35px;
+      height: 35px;
+      border: 6px solid #ffd700;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ff9800;
+      z-index: 1;
+    }
+
+    .earring-left { left: -25px; }
+    .earring-right { right: -25px; }
+
+    /* श्री राम तिलक (Tilak) */
+    .tilak-container {
+      position: absolute;
+      top: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 3;
+    }
+
+    .tilak-u {
+      width: 30px;
+      height: 45px;
+      border: 6px solid #ffffff;
+      border-top: none;
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 0 8px #ffffff;
+    }
+
+    .tilak-dot {
+      position: absolute;
+      top: 18px;
+      width: 10px;
+      height: 22px;
+      background: #d50000;
+      border-radius: 5px;
+      box-shadow: 0 0 6px #d50000;
+    }
+
+    /* आँखें (Eyes) */
+    .eyes {
+      position: absolute;
+      top: 80px;
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .eye {
+      width: 22px;
+      height: 12px;
+      background: #ffffff;
+      border-radius: 50% 50% 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eye::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 6px;
+      width: 10px;
+      height: 10px;
+      background: #212121;
+      border-radius: 50%;
+    }
+
+    /* गदा (Gada) */
+    .gada {
+      position: absolute;
+      right: 20px;
+      top: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: rotate(-15deg);
+      z-index: 3;
+    }
+
+    .gada-head {
+      width: 70px;
+      height: 70px;
+      background: radial-gradient(circle, #ffe082 0%, #ffb300 70%, #ff6f00 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 15px #ffb300;
+      position: relative;
+    }
+
+    .gada-head::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: -5px;
+      width: 80px;
+      height: 10px;
+      background: #ffa000;
+      border-radius: 5px;
+    }
+
+    .gada-handle {
+      width: 12px;
+      height: 200px;
+      background: linear-gradient(180deg, #ffd700, #b8860b);
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+    }
+
+    /* माला (Mala/Necklace) */
+    .mala {
+      position: absolute;
+      bottom: -15px;
+      width: 110px;
+      height: 50px;
+      border: 5px dashed #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ffffff;
+      z-index: 3;
+    }
+
+    /* टेक्स्ट (Text) */
+    .text {
+      margin-top: 30px;
+      color: #ff9800;
+      font-size: 32px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff5722, 0 0 25px #d50000;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      100% { transform: scale(1.08); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="canvas">
+    <!-- दिव्य आभामंडल -->
+    <div class="divine-aura"></div>
+
+    <!-- गदा -->
+    <div class="gada">
+      <div class="gada-head"></div>
+      <div class="gada-handle"></div>
+    </div>
+
+    <!-- मुखमंडल -->
+    <div class="face">
+      <!-- मुकुट -->
+      <div class="crown">
+        <div class="crown-gem"></div>
+      </div>
+
+      <!-- कुंडल -->
+      <div class="earring-left"></div>
+      <div class="earring-right"></div>
+
+      <!-- श्री राम तिलक -->
+      <div class="tilak-container">
+        <div class="tilak-u"></div>
+        <div class="tilak-dot"></div>
+      </div>
+
+      <!-- नेत्र -->
+      <div class="eyes">
+        <div class="eye"></div>
+        <div class="eye"></div>
+      </div>
+
+      <!-- माला -->
+      <div class="mala"></div>
+    </div>
+  </div>
+
+  <div class="text">॥ जय श्री राम ॥</div>
+
+</body>
+</html>
