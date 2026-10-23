@@ -4,33 +4,37 @@ body {
     
 }
 table{
-    background-color:aliceblue;
+    background-color: #f4e6de;
     width: 100%;
-    
-    
+    radius: 10px;
+    border-color: black;
     
 }
 th{
    background-color:aqua ;
    margin: 10px;
-   padding: 10px;
+   padding: 20px;
+   border-radius:10px;
    
 }
 td{
-    background-color: antiquewhite;
+    background-color: white;
     margin: 10px;
     padding: 10px;
 }
 caption{
     
-    color: rgb(118, 3, 34);
+    color: brown;
     margin: 10px;
 }
 h1{
     text-align: center;
-    background-color: aqua;
+    background-color: red;
     width: 100%;
     border:1px solid black;
+  padding: 50px;
+    border-radius:20px;
+    color: aliceblue;
     
     
 }
