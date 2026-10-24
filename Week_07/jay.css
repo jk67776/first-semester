@@ -1,0 +1,77 @@
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(240, 248, 255);
+        }
+
+        /* Navbar: logo left, links + button right */
+        nav {
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            
+            background: #442626;
+            color: white;
+            padding: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+            list-style:none; 
+            border:;
+                }
+
+        nav a {
+            color: white;
+            text-decoration:none;
+        }
+
+        .btn {
+            background: #ffb703;
+            border: 0;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* Hero: everything in the centre */
+        .hero {
+            display: flex;
+            flex-direction:column;
+            align-items:center ;
+            justify-content: center;
+            gap: 15px;
+            height: 300px;
+            padding: 16px;
+            text-align: center;
+            background: #d281eb;
+            color: rgb(24, 3, 3);
+            border:5px;
+            
+            
+        }
+
+        /* Cards: wrap when there is no space */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 10px;
+        }
+
+        .card {
+            flex: 200px;
+            
+            background: #e0cbcb;
+            padding: 20px;
+            border-radius: 10px;
+            text-align:center ;
+        }

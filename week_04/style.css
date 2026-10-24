@@ -1,0 +1,89 @@
+*{
+margin: 0px;
+padding: 0px;
+}
+body{
+background-color:rgb(141, 159, 203) ;
+}
+
+img{
+    border-radius: 40px;
+    height: auto;
+    width:auto ;
+
+}
+
+
+nav{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgb(23, 23, 109);
+    color: azure;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    color: azure;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+.hero{
+justify-content: space-between;
+display: flex;
+background:rgb(141, 159, 203) ;
+height:300px ;
+
+}
+.detail{
+ padding:20px;
+ gap: ;
+}
+.p2{
+    font-style: italic;
+text-decoration: underline;
+color: brown;
+}
+.skills{
+background:rgb(141, 159, 203) ;
+height: 170px;
+padding: 10px;
+}
+.skills strong{
+    font-size: 20px;
+    color: rgb(105, 44, 7);
+}
+.contact{
+   background:rgb(141, 159, 203) ; 
+   padding: 10px;
+}
+textarea{
+    display: flex;
+    width: 100%;
+    background-color: beige;
+}
+input{
+    display: flex;
+    width: 60%;
+    padding: 10px;
+    border: 1px, solid black;
+    border-radius: 10px;
+    background-color: beige;
+}
+.btn{
+    
+    background-color: yellow;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;align-items: center;
+}
+.contact label{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+

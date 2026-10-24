@@ -1,26 +1,27 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4e6de;
-    
+    display: flexbox;
 }
 table{
     background-color: #f4e6de;
     width: 100%;
-    radius: 10px;
-    border-color: black;
+    display: 
+    
     
 }
 th{
    background-color:aqua ;
    margin: 10px;
    padding: 20px;
-   border-radius:10px;
+   
    
 }
 td{
     background-color: white;
     margin: 10px;
     padding: 10px;
+    
 }
 caption{
     
@@ -30,17 +31,19 @@ caption{
 h1{
     text-align: center;
     background-color: red;
-    width: 100%;
-    border:1px solid black;
-  padding: 50px;
-    border-radius:20px;
+    display: flex;
+    border-radius:20px ;
+    padding: 50px;
+    justify-content: center;
     color: aliceblue;
+    margin: 0px;
     
     
 }
 h2{
     text-align: center;
-    color: red
+    color: red;
+    te
 }
 
 
@@ -58,12 +61,17 @@ button{
     background-color: rgb(130, 218, 130);
 }
 textarea{
-    width: 100%;
+    width:100%;
+    display: flex;
     background-color: rgb(240, 239, 239);
     
 }
 nav{
     
     width: 50%;
+}
+*{
+    
+    padding: 0px;
 }
 
